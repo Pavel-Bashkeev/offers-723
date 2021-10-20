@@ -1,0 +1,118 @@
+.reviews{
+  padding: 75px 0 37px;
+  &__title{
+    font: 800 30px / 35px $font;
+    margin-bottom: 30px;
+  }
+}
+.swiper{
+  padding: 30px 10px 60px;
+}
+.slide{
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  max-width: 420px;
+  margin: 0 auto;
+  &-top{
+    padding: 10px 15px;
+    &__box{
+      widows: 45px;
+      height: 45px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 10px;
+    }
+    &__name{
+      font: 600 14px/19px $font;
+    }
+    &__date{
+      font:600 14px/19px $font-comment;
+      color: #B2B2B2;
+      display: flex;
+      align-items: center;
+      &::before{
+        content: '';
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: #c4c4c4;
+        margin-left: 10px;
+        margin-right: 7px;
+        display: block;
+        order:2;
+      }
+      &::after{
+        content:'';
+        width: 10px;
+        height: 10px;
+        background-image: url('../images/dest/icons/traced.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        order: 3;
+      }
+    }
+    &__dot{
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      width: 16px;
+      justify-content: space-between;
+      &-item{
+        width: 4px;
+        height: 4px;
+        background-color: $default;
+        border-radius: 50%;
+      }
+    }
+  }
+  &-icons{
+    padding: 12px 15px;
+    &__top{
+      padding-bottom: 12px;
+      border-bottom: 0.5px solid #cecece;
+    }
+    &__item{
+      margin-right: 10px;
+    }
+    &__text{
+      font: 400 15px/20px $font-comment;
+      color: #5a5d62;
+    }
+    &__link{
+      &:not(:last-child){
+        margin-right: 12px;
+      }
+    }
+    &__bottom{
+      padding-top: 8px;
+    }
+  }
+  &-comment{
+    padding: 0 15px 15px;
+    &__liked{
+      margin-bottom: 5px;
+    }
+    &__text{
+      font: 400 15px/20px $font-comment;
+      color: $black;
+    }
+  }
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+  bottom: 0;
+}
+
+.swiper-pagination-bullet{
+  width: 18px;
+  height: 18px;
+  background-color: #f8ded6;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active{
+  background-color: #FF00F5;
+}
+@media (max-width: 375px) {
+  .slide {
+    max-width: 100%;
+}
+}
