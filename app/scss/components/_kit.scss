@@ -1,0 +1,63 @@
+.kit {
+  padding: 50px 0 70px;
+  background-image: url('../images/dest/section-bg.png');
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  &__title {
+    max-width: 330px;
+  }
+
+  &__box {
+    margin-bottom: 50px;
+  }
+}
+
+.kit-list {
+  counter-reset: item;
+  
+
+  &__item {
+    display: flex;
+    position: relative;
+    &-text {
+      max-width: 320px;
+      font: 400 20px/25px $font;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    &::before {
+      counter-increment: item;
+      content: counter(item);
+      color: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 39px;
+      height: 39px;
+      background-color: #E74492;
+      position: relative;
+      z-index: 1;
+      font: 900 30px/ 35px $font;
+      border-radius: 50%;
+      margin-right: 16px;
+      flex-shrink: 0;
+    }
+    &::after {
+      content: '';
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #FFFFFF 0%, #F160A6 100%);
+      z-index: 0;
+      left: -3px;
+      top: -3px;
+      display: block;
+    }
+  }
+}

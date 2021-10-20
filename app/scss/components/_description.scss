@@ -1,0 +1,22 @@
+.description{
+  padding: 50px 0;
+  &__subtitle{
+    max-width: 430px;
+    font:700 25px/30px $font;
+    margin-bottom: 40px;
+    padding: 0 5px;
+  }
+  &-pres{
+    margin-bottom: 40px;
+  }
+}
+.description-info{
+  padding: 0 25px;
+  margin-bottom: 40px;
+  &__text{
+    font: 400 20px / 25px $font;
+    &:not(:last-child){
+      margin-bottom: 15px;
+    }
+  }
+}
