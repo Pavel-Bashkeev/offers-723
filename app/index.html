@@ -474,7 +474,7 @@
 			currentlangGeo == 'gr' ? currentImg(currentlangGeo, slideImg) : '';
 			currentlangGeo == 'it' ? currentImg(currentlangGeo, slideImg) : '';
 
-			if (!currentlangGeo == 'es' && !currentlangGeo == 'pt' && !currentlangGeo == 'gr' && !currentlangGeo == 'it') {
+			if (!(currentlangGeo == 'es') && !(currentlangGeo == 'pt') && !(currentlangGeo == 'gr') && !(currentlangGeo == 'it')) {
 				currentImg('other', slideImg);
 			}
 		});
